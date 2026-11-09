@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Annie Roth Art</title>
+    <meta
+      name="description"
+      content="Healing art from Lancaster. Originals, limited prints, and commissions by Annie Roth. Prices on the work. Comment HEAL."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Annie Roth Art" />
+    <meta
+      property="og:description"
+      content="Lancaster studio for divine-feminine healing paintings with gold leaf. Price on the work."
+    />
+    <meta property="og:image" content="https://sheetzy911-ops.github.io/annie-roth-art/og.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#1c1410" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,520;9..144,640&family=Outfit:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --ink: #1c1410;
+        --cream: #f6f1e8;
+        --paper: #fffdf8;
+        --gold: #a68445;
+        --rose: #8d3e49;
+        --muted: #6f645b;
+        --line: #e4d9cb;
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        background: var(--cream);
+        color: var(--ink);
+        font-family: Outfit, system-ui, sans-serif;
+        line-height: 1.5;
+      }
+      img { max-width: 100%; display: block; }
+      a { color: inherit; }
+      h1, h2, h3 { font-family: Fraunces, Georgia, serif; font-weight: 520; letter-spacing: -0.03em; margin: 0; }
+      .wrap { width: min(1120px, calc(100% - 2rem)); margin: 0 auto; }
+      header {
+        position: sticky; top: 0; z-index: 5;
+        background: color-mix(in srgb, var(--cream) 92%, transparent);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid var(--line);
+      }
+      .bar { display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; padding: 0.8rem 0; }
+      nav { display: flex; gap: 0.35rem; align-items: center; }
+      nav a { text-decoration: none; padding: 0.45rem 0.55rem; font-size: 0.92rem; }
+      .btn {
+        display: inline-flex; align-items: center; justify-content: center; gap: 0.4rem;
+        min-height: 2.75rem; padding: 0.65rem 1rem; border-radius: 999px;
+        text-decoration: none; border: 0; font: inherit; font-weight: 500; cursor: pointer;
+      }
+      .gold { background: var(--gold); color: var(--ink); }
+      .ink { background: var(--ink); color: var(--cream); }
+      .line { background: transparent; box-shadow: inset 0 0 0 1px var(--line); }
+      .rose { background: var(--rose); color: var(--cream); }
+      .hero, .split { display: grid; gap: 1.5rem; align-items: center; padding: 2rem 0 1rem; }
+      .kicker { text-transform: uppercase; letter-spacing: 0.16em; font-size: 0.78rem; color: var(--gold); margin: 0; }
+      h1 { font-size: clamp(2.6rem, 8vw, 4.4rem); line-height: 0.95; }
+      .lede { font-size: 1.1rem; color: var(--muted); max-width: 38rem; }
+      .art {
+        aspect-ratio: 4/5; object-fit: cover; width: 100%; border-radius: 1.25rem;
+        background: #efe6d8; box-shadow: inset 0 0 0 1px var(--line);
+      }
+      .grid { display: grid; gap: 1rem; }
+      .hide-sm { display: none; }
+      @media (min-width: 720px) {
+        .hero, .split { grid-template-columns: 1fr 1fr; padding: 3.2rem 0; }
+        .grid.cards { grid-template-columns: repeat(3, 1fr); }
+        .hide-sm { display: inline; }
+      }
+      .card { background: var(--paper); border-radius: 1.25rem; box-shadow: inset 0 0 0 1px var(--line); overflow: hidden; }
+      .pad { padding: 1rem; }
+      .row { display: flex; justify-content: space-between; gap: 0.75rem; align-items: baseline; }
+      .muted { color: var(--muted); }
+      .actions { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.8rem; }
+      #heal { background: var(--ink); color: var(--cream); }
+      #heal .card { color: var(--ink); }
+      input, select {
+        width: 100%; min-height: 2.75rem; border-radius: 0.85rem; border: 0;
+        box-shadow: inset 0 0 0 1px var(--line); padding: 0.65rem 0.8rem; font: inherit; background: var(--paper);
+      }
+      label { display: block; font-size: 0.92rem; margin-top: 0.7rem; }
+      footer { border-top: 1px solid var(--line); padding: 2.2rem 0 3rem; }
+      .note { font-size: 0.85rem; color: var(--muted); }
+      #piece { scroll-margin-top: 5rem; }
+      .rooms button[aria-pressed="true"] { background: var(--ink); color: var(--cream); }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="wrap bar">
+        <a href="#top" style="text-decoration:none">
+          <strong style="font-family:Fraunces,Georgia,serif;font-size:1.25rem">Annie Roth</strong>
+          <div class="note">Lancaster · healing art</div>
+        </a>
+        <nav>
+          <a class="hide-sm" href="#shop">Shop</a>
+          <a class="hide-sm" href="#commission">Commissions</a>
+          <a class="btn line" href="https://wa.me/17173305531?text=HEAL%20%E2%80%94%20send%20me%20what%27s%20available%20and%20the%20prices.">WhatsApp</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="wrap hero">
+        <div>
+          <p class="kicker">Lancaster, Pennsylvania</p>
+          <h1>Healing art. The price is on the work.</h1>
+          <p class="lede">
+            Recovering, one artwork at a time — motherhood, the divine feminine, and the days that stayed hard.
+            Originals, signed prints, and commissions. No “DM for price.”
+          </p>
+          <div class="actions">
+            <a class="btn gold" href="#shop">Shop what’s available</a>
+            <a class="btn line" href="#heal">Comment HEAL</a>
+          </div>
+          <p class="note" id="hero-price"></p>
+        </div>
+        <a href="#piece" id="hero-link"><img class="art" id="hero-img" alt="HEAL, mixed-media painting by Annie Roth" /></a>
+      </section>
+
+      <section id="heal">
+        <div class="wrap split">
+          <div>
+            <p class="kicker">Keyword</p>
+            <h2 style="font-size:clamp(2rem,6vw,3rem)">Type HEAL.</h2>
+            <p>Same reply the inbox should send in under two hours: the list, the prices, a 24-hour hold, three payments. Then it goes to WhatsApp, Instagram, or X.</p>
+          </div>
+          <form class="card pad" id="heal-form">
+            <label for="heal-input">Comment or DM</label>
+            <input id="heal-input" placeholder="HEAL" />
+            <button class="btn gold" style="margin-top:0.8rem" type="submit">Send the auto-reply</button>
+            <p id="heal-reply" class="note" style="white-space:pre-wrap"></p>
+            <div class="actions" id="heal-share" hidden></div>
+          </form>
+        </div>
+      </section>
+
+      <section id="shop" class="wrap" style="padding:2.5rem 0">
+        <div class="row">
+          <h2 style="font-size:2.4rem">Available</h2>
+          <p class="note">Originals $245–$545 · prints $65–$250</p>
+        </div>
+        <div class="grid cards" id="shop-grid" style="margin-top:1rem"></div>
+      </section>
+
+      <section id="piece" class="wrap" hidden style="padding-bottom:2rem">
+        <div class="split">
+          <div>
+            <div class="card" id="mock" style="background:var(--cream);padding:1.5rem">
+              <img class="art" id="piece-img" alt="" style="box-shadow:0 18px 40px rgba(28,20,16,.18);border:8px solid var(--paper)" />
+            </div>
+            <div class="actions rooms" id="rooms"></div>
+            <p class="note" id="room-note"></p>
+          </div>
+          <div>
+            <p class="note" id="piece-sku"></p>
+            <h2 id="piece-title" style="font-size:clamp(2.4rem,6vw,3.4rem)"></h2>
+            <p class="muted" id="piece-meta"></p>
+            <p id="piece-story"></p>
+            <p id="piece-price" style="font-family:Fraunces,Georgia,serif;font-size:2.4rem;margin:0.4rem 0"></p>
+            <p class="note" id="piece-plan"></p>
+            <div class="actions" id="editions"></div>
+            <div class="actions" id="piece-buy"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="commission" class="wrap split">
+        <div>
+          <h2 style="font-size:2.4rem">Commissions</h2>
+          <p class="muted">Medusa, Buddha, divine feminine, or a portrait. Custom is the original price times 1.5. Rush under 14 days adds $100. Nothing starts without the 50% deposit.</p>
+          <p id="deposit" style="font-family:Fraunces,Georgia,serif;font-size:2rem"></p>
+          <p class="note" id="full-quote"></p>
+        </div>
+        <form class="card pad" id="quote">
+          <label>Subject
+            <select id="subject">
+              <option>Medusa</option>
+              <option>Buddha / HEAL</option>
+              <option>Divine</option>
+              <option>Custom portrait</option>
+            </select>
+          </label>
+          <label>Size
+            <select id="size">
+              <option value="16x20">16×20</option>
+              <option value="18x24">18×24</option>
+              <option value="24x36">24×36</option>
+            </select>
+          </label>
+          <label>Words to include <input id="words" placeholder="HEAL, a name, a date" /></label>
+          <label>Days until you need it <input id="days" inputmode="numeric" value="21" /></label>
+          <div class="actions">
+            <a class="btn rose" id="deposit-wa" href="#">Ask on WhatsApp</a>
+            <a class="btn line" id="deposit-ig" href="https://ig.me/m/annieroth.art" target="_blank" rel="noreferrer">Instagram</a>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap split">
+        <div>
+          <p style="font-family:Fraunces,Georgia,serif;font-size:1.8rem;margin:0">Price on the work.</p>
+          <p class="muted">EsoArts co-owner. Divine feminine, motherhood, recovery. Originals from $245. Prints from $65. Comment HEAL.</p>
+          <p class="note">Stripe Checkout is connected in test mode on the account named stripe-pink-flower. Use card 4242 4242 4242 4242. Sales tax is not collected yet. Say if you collect sales tax, VAT, or GST and Stripe Tax can be turned on. Live charges need the live Stripe account.</p>
+        </div>
+        <div class="actions">
+          <a class="btn ink" href="https://wa.me/17173305531?text=HEAL%20%E2%80%94%20send%20me%20what%27s%20available%20and%20the%20prices.">WhatsApp</a>
+          <a class="btn line" href="https://www.instagram.com/annieroth.art/" target="_blank" rel="noreferrer">Instagram</a>
+          <a class="btn line" href="https://x.com/intent/post?text=Healing%20art%20from%20Lancaster.%20Price%20on%20the%20work.%20Comment%20HEAL." target="_blank" rel="noreferrer">Share on X</a>
+          <a class="btn line" href="https://www.instagram.com/esoarts_/" target="_blank" rel="noreferrer">@esoarts_</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const WORKS = [
+        { sku:"AR-2026-001", slug:"heal", title:"HEAL", size:"16×20", medium:"Acrylic, Posca, gold leaf, collage", status:"Available", story:"I painted this on a morning I stayed. The gold is the part of me that didn't quit — for the woman rebuilding a room and a life at the same time.", image:"art/heal.jpg", editions:[
+          ["original","Original, unframed",245,"https://buy.stripe.com/test_7sYcN5dWIflm4R2793ak000"],
+          ["framed","Original, framed",295,"https://buy.stripe.com/test_00w28rdWIb561EQ0KFak001"],
+          ["print","Signed print · edition of 25",125,"https://buy.stripe.com/test_cNifZh19Wflmdnydxrak002"]
+        ]},
+        { sku:"AR-2026-002", slug:"medusa", title:"Medusa", size:"18×24", medium:"Acrylic, gold leaf, collage", status:"Available", story:"She isn't a monster. She's what rage looks like after you stop apologizing for surviving it. Motherhood taught me that face.", image:"art/medusa.jpg", editions:[
+          ["original","Original, unframed",315,"https://buy.stripe.com/test_dRm4gzcSEa1297i9hbak003"],
+          ["framed","Original, framed",365,"https://buy.stripe.com/test_eVq6oH2e0gpqfvG793ak004"],
+          ["print","Signed print · edition of 25",175,"https://buy.stripe.com/test_cNiaEX3i48WY1EQ64Zak005"]
+        ]},
+        { sku:"AR-2026-003", slug:"divine", title:"DIVINE", size:"18×24", medium:"Acrylic, heavy gold leaf, collage", status:"Available", story:"Divine feminine, not a costume. I make these while the house is finally quiet. This one is rebirth with the lights left on.", image:"art/divine.jpg", editions:[
+          ["original","Original, unframed",375,"https://buy.stripe.com/test_28E14ng4Qflm4R2gJDak006"],
+          ["framed","Original, framed",425,"https://buy.stripe.com/test_aFa14n2e0c9aabm0KFak007"],
+          ["print","Signed print · edition of 25",175,"https://buy.stripe.com/test_9B600j5qcddecjualfak008"]
+        ]},
+        { sku:"AR-2026-004", slug:"bloom", title:"Bloom", size:"16×20", medium:"Acrylic, gold leaf, floral collage", status:"Sold", story:"The original walked out the door. People were still asking, so the print edition stays — same face, twenty-five signed copies, then it's done.", image:"art/bloom.jpg", editions:[
+          ["print","Signed print · edition of 25",125,"https://buy.stripe.com/test_aFadR92e04GI2IU793ak009"]
+        ]},
+        { sku:"AR-2026-005", slug:"rebirth", title:"Rebirth", size:"24×30", medium:"Acrylic impasto, heavy gold leaf", status:"Available", story:"Cracks first, then the gold. That's the only order I trust. This is the piece I paint when recovery stops being a secret.", image:"art/rebirth.jpg", editions:[
+          ["original","Original, unframed",455,"https://buy.stripe.com/test_28E3cv19Wflm97ictnak00a"],
+          ["framed","Original, framed",505,"https://buy.stripe.com/test_dRmbJ15qc4GIabmbpjak00b"],
+          ["print","Signed print · edition of 25",250,"https://buy.stripe.com/test_fZubJ1f0M0qs4R22SNak00c"]
+        ]},
+        { sku:"AR-2026-006", slug:"mother", title:"Still Here", size:"24×36", medium:"Acrylic, gold leaf, mixed media, framed", status:"Available", story:"Two faces, one watch. I painted us after a long night and a longer year. It's large because the feeling was.", image:"art/mother.jpg", editions:[
+          ["framed","Original, framed",545,"https://buy.stripe.com/test_6oUdR93i42yAabm3WRak00d"],
+          ["print","Signed print · edition of 25",250,"https://buy.stripe.com/test_00w8wP8Co2yAabmdxrak00e"]
+        ]}
+      ];
+      const money = (n) => new Intl.NumberFormat("en-US",{style:"currency",currency:"USD",maximumFractionDigits:0}).format(n);
+      const split3 = (total) => { const first = Math.ceil(total/3); return [first, first, total-first-first]; };
+      const wa = (text) => "https://wa.me/17173305531?text=" + encodeURIComponent(text);
+      const xpost = (text) => "https://x.com/intent/post?text=" + encodeURIComponent(text);
+      const rooms = ["Studio","Bedroom","Waiting room"];
+      let open = WORKS[0];
+      let edition = 0;
+      let room = 0;
+
+      function shareRow(text) {
+        return `<a class="btn ink" href="${wa(text)}">WhatsApp</a>
+          <a class="btn line" href="https://ig.me/m/annieroth.art" target="_blank" rel="noreferrer">Instagram</a>
+          <a class="btn line" href="${xpost(text)}" target="_blank" rel="noreferrer">X</a>`;
+      }
+
+      function renderShop() {
+        document.getElementById("shop-grid").innerHTML = WORKS.map((work) => {
+          const price = work.editions[0][2];
+          const pay = split3(price);
+          return `<article class="card">
+            <a href="#${work.slug}"><img class="art" src="${work.image}" alt="${work.title} by Annie Roth"></a>
+            <div class="pad">
+              <div class="row"><h3 style="font-size:1.6rem">${work.title}</h3><strong>${money(price)}</strong></div>
+              <p class="note">${work.size} in · ${work.status === "Sold" ? "Original sold · print open" : work.status}</p>
+              <p>3 payments · ${pay.map(money).join(" / ")}</p>
+              <div class="actions">
+                <a class="btn gold" href="${work.editions[0][3]}" target="_blank" rel="noreferrer">${work.status === "Sold" ? "Buy print" : "Pay with Stripe"}</a>
+                <a class="btn line" href="#${work.slug}">Mockup</a>
+              </div>
+            </div>
+          </article>`;
+        }).join("");
+      }
+
+      function renderPiece() {
+        const ed = open.editions[edition];
+        const price = ed[2];
+        const pay = split3(price);
+        const blurb = `${open.title} · ${ed[1]} · ${money(price)}. ${open.size} in.`;
+        document.getElementById("piece").hidden = false;
+        document.getElementById("piece-img").src = open.image;
+        document.getElementById("piece-img").alt = `${open.title} mocked up on a ${rooms[room].toLowerCase()} wall`;
+        document.getElementById("piece-sku").textContent = open.sku;
+        document.getElementById("piece-title").textContent = open.title;
+        document.getElementById("piece-meta").textContent = `${open.size} in · ${open.medium}`;
+        document.getElementById("piece-story").textContent = open.story;
+        document.getElementById("piece-price").textContent = money(price);
+        document.getElementById("piece-plan").textContent = `Or ${pay.map(money).join(", ")}.`;
+        document.getElementById("room-note").textContent = `To scale in a ${rooms[room].toLowerCase()}. ${money(price)}.`;
+        document.getElementById("rooms").innerHTML = rooms.map((name, index) =>
+          `<button class="btn line" type="button" aria-pressed="${index===room}" data-room="${index}">${name}</button>`
+        ).join("");
+        document.getElementById("editions").innerHTML = open.editions.map((item, index) =>
+          `<button class="btn ${index===edition?"ink":"line"}" type="button" data-ed="${index}">${item[1]} · ${money(item[2])}</button>`
+        ).join("");
+        document.getElementById("piece-buy").innerHTML =
+          `<a class="btn gold" href="${ed[3]}" target="_blank" rel="noreferrer">Pay with Stripe</a>` + shareRow(blurb);
+      }
+
+      function openWork(slug) {
+        const found = WORKS.find((work) => work.slug === slug);
+        if (!found) return;
+        open = found;
+        edition = 0;
+        renderPiece();
+        document.getElementById("piece").scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+
+      document.getElementById("hero-img").src = WORKS[0].image;
+      document.getElementById("hero-price").textContent =
+        `HEAL · 16×20 · gold leaf · ${money(245)} · three payments of ${split3(245).map(money).join(", ")}`;
+      renderShop();
+      renderPiece();
+
+      document.body.addEventListener("click", (event) => {
+        const roomBtn = event.target.closest("[data-room]");
+        const edBtn = event.target.closest("[data-ed]");
+        const hashLink = event.target.closest('a[href^="#"]');
+        if (roomBtn) { room = Number(roomBtn.dataset.room); renderPiece(); }
+        if (edBtn) { edition = Number(edBtn.dataset.ed); renderPiece(); }
+        if (hashLink) {
+          const id = hashLink.getAttribute("href").slice(1);
+          if (WORKS.some((work) => work.slug === id)) {
+            event.preventDefault();
+            history.replaceState(null, "", "#" + id);
+            openWork(id);
+          }
+        }
+      });
+
+      document.getElementById("heal-form").addEventListener("submit", (event) => {
+        event.preventDefault();
+        const text = document.getElementById("heal-input").value.trim() || "HEAL";
+        document.getElementById("heal-input").value = text;
+        if (!text.toUpperCase().includes("HEAL")) return;
+        const lines = WORKS.map((work) => `${work.title} — ${money(work.editions[0][2])} (${work.status === "Sold" ? "print" : "original"})`);
+        const reply = `Thank you. Here's what's available, with the price on it:\n${lines.join("\n")}\n\nWant me to hold one for 24 hours? I do three payments. Comment HEAL anytime.`;
+        document.getElementById("heal-reply").textContent = reply;
+        const share = document.getElementById("heal-share");
+        share.hidden = false;
+        share.innerHTML = shareRow(reply);
+      });
+
+      function roundAnnie(amount) {
+        let value = Math.ceil(amount / 5) * 5;
+        if (value % 10 === 0) value += 5;
+        return value;
+      }
+      function quote() {
+        const dims = { "16x20":[16,20], "18x24":[18,24], "24x36":[24,36] };
+        const [length, width] = dims[document.getElementById("size").value];
+        const heavy = document.getElementById("size").value !== "16x20";
+        const long = Math.max(length, width);
+        const short = Math.min(length, width);
+        let multiplier = 4.5;
+        if (heavy || long >= 36) multiplier = 7;
+        else if (long >= 24 && short >= 18) multiplier = 5.5;
+        let raw = (length + width) * multiplier + 75;
+        const base = roundAnnie(raw);
+        const rush = Number(document.getElementById("days").value) < 14;
+        let full = Math.round(base * 1.5) + (rush ? 100 : 0);
+        if (full % 10 === 0) full += 5;
+        const deposit = Math.round(full / 2);
+        const subject = document.getElementById("subject").value;
+        const words = document.getElementById("words").value.trim();
+        const note = `Commission: ${subject}, ${document.getElementById("size").value}${words ? `, words: ${words}` : ""}. ${money(full)} with a ${money(deposit)} deposit.`;
+        document.getElementById("deposit").textContent = `${money(deposit)} to begin`;
+        document.getElementById("full-quote").textContent = `Full ${money(full)}${rush ? " · rush fee included" : ""} · about 2–3 weeks`;
+        document.getElementById("deposit-wa").href = wa(note);
+      }
+      document.getElementById("quote").addEventListener("input", quote);
+      quote();
+      if (location.hash.length > 1) openWork(location.hash.slice(1));
+    </script>
+  </body>
+</html>
