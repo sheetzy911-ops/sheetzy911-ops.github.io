@@ -2,7 +2,9 @@
 
 Lancaster studio site for divine-feminine healing paintings with gold leaf. Prices stay on the work.
 
-The public site is in [`docs/`](docs/index.html) and is published with GitHub Pages.
+The public site is published at [sheetzy911-ops.github.io](https://sheetzy911-ops.github.io/).
+
+Source for that site lives in this repository’s [`docs/`](docs/index.html) folder and is mirrored to the GitHub Pages user site.
 
 ## Reach Annie
 
@@ -19,4 +21,6 @@ The connected Stripe account (`stripe-pink-flower`) is in **test mode**. Pay wit
 
 ## Pages
 
-GitHub Pages serves the `docs` folder on `main`.
+Live site: https://sheetzy911-ops.github.io/
+
+This repository also keeps the same files under `docs/` on `main`.
